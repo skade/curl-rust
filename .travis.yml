@@ -1,0 +1,9 @@
+install:
+  - curl http://www.rust-lang.org/rustup.sh | sudo sh -
+script:
+  - cat /usr/include/curl/curl.h
+  - cat /usr/include/curl/curlver.h
+  - cargo build
+  - cargo test
+env:
+  - LD_LIBRARY_PATH=/usr/local/lib
